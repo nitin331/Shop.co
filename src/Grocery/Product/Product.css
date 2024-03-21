@@ -47,23 +47,31 @@
   .heading span{
     color: var(--secondary);
     text-transform: uppercase;
+    opacity: 70%;
   }
   
-.product .box-container{
+  .product .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    opacity: 90%;
+    padding: 1rem; /* Adjust the padding as needed */
+    width: 100%; /* Ensure the container takes up the full width */
+    box-sizing: border-box; /* Include padding and border in the box's total width and height */
+    gap: 15px;
   }
-  
   .product .box-container .box{
     text-align: center;
     background: var(--white);
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
     position: relative;
-    overflow: hidden;
+    overflow: hidden; 
+    transition: transform 0.3s ease; 
   }
-  
+  .product .box-container .box:hover .image {
+    transform: scale(1.05); /* Added scale transformation on hover */
+  }
+
   .product .box-container .box .image{
     height: 35rem;
     width: 100%;
@@ -75,8 +83,13 @@
     width: 100%;
     border-radius: .5rem;
     object-fit: cover;
+    transition: transform 0.3s ease;
   }
   
+  .product .box-container .box:hover .image img {
+    transform: scale(1); /* Added scale transformation on hover */
+  }
+
   .product .box-container .box .content{
     padding: 2rem;
     padding-top: 0;
@@ -117,26 +130,28 @@
   /* end */
   
 
-  /* Add this to your existing CSS or create a new CSS file */
+
   
 
-  .add-to-cart-btn {
+  .btn {
     
-    background: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 8px;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1.3rem 3.5rem;
+    font-size: 1.7rem;
+    color: var(--white);
+    border-radius: .5rem;
+    background: var(--primary-color);
     cursor: pointer;
-    transition: background 0.3s ease;
   }
   
-  .add-to-cart-btn:hover {
-    background: #45a049;
+  .btn:hover {
+    color: var(--white);
+    background: var(--secondary);
+    box-shadow: var(--box-shadow);
   }
   
-  .add-to-cart-btn svg {
+  .btn svg {
     margin: 0 5px;
   }
   

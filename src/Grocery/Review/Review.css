@@ -1,5 +1,5 @@
 .review .slide{
-    padding: 1.5rem;
+    padding: 4rem;
     box-shadow: var(--box-shadow);
     border: .1rem solid rgba(0, 0, 0, 0.2);
     border-radius: .5rem;
@@ -46,5 +46,23 @@
   .review .slide .user i{
     font-size: 1.3rem;
     color: var(--primary-color);
+  }
+ 
+
+
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .fa-heartbeat {
+    animation: heartbeat 1s infinite;
   }
   

@@ -10,7 +10,7 @@ const Contact = () => {
                 <div className="image">
                   <img src="images/contact.png" alt="" />
                 </div>
-                <form action>
+                <form >
                   <div className="inputBox">
                     <input type="text" placeholder="first name" />
                     <input type="text" placeholder="last name" />
@@ -19,7 +19,7 @@ const Contact = () => {
                     <input type="email" placeholder="email address" />
                     <input type="number" placeholder="phone" />
                   </div>
-                  <textarea placeholder="message" id cols={30} rows={10} defaultValue={""} />
+                  <textarea placeholder="message"  cols={30} rows={10} defaultValue={""} />
                   <input type="submit" defaultValue="order now" className="btn" />
                 </form>
               </div>

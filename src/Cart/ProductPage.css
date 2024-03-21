@@ -1,0 +1,155 @@
+
+
+h1{
+  margin-top: 100px;
+  font-family: "Poppins", sans-serif;
+font-weight: 400;
+font-size: 20px;
+font-style: normal;
+}
+
+.btn{
+  margin-left: 100px;
+}
+.div-container{
+  margin-top: 50px;
+  margin-left: 200px;
+
+}
+
+.div{
+  height: 200px;
+  width: 80%;
+  border: 1px solid black;
+  margin-left: 50px;
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  left: 100px;
+  width: calc(25% - 20px); /* Adjust the width as needed */
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust margin as needed */
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: calc(33.33% - 10px); /* Adjust the width as needed for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 10px); /* Adjust the width as needed for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: calc(100% - 10px); /* Adjust the width as needed for smaller screens */
+  }
+}
+
+
+.card-title{
+  margin-left: 70px;
+}
+
+.card-text{
+  margin-left: 70px;
+}
+
+.add{
+ margin-left: 100px;
+  background-color: #a987a2;
+  height:25px;
+  width: 50%;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.4); /* Adjust the scale factor as needed */
+}
+
+.center {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.cart-page {
+  text-align: center;
+}
+
+.cart-items {
+  margin-top: 20px;
+  overflow-y: auto;  /* Optional: Add margin to the top */
+}
+
+.cart-item {
+  margin-bottom: 20px; /* Optional: Adds space between items */
+}
+
+.product-details {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc; /* Add border */
+  padding: 10px; /* Optional: Add padding */
+}
+
+.product-details img {
+  margin-left: 100px
+   /* Optional: Adds space between image and text */
+}
+
+.product-details .details {
+  flex: 1;
+}
+
+
+.cart-container {
+  position: relative;
+  overflow-y: auto;
+}
+
+.total-price {
+  position: absolute;
+  right: 100px;
+  padding: 10px;
+}
+
+.remove{
+  margin-right: 100px;
+}
+
+/* Brace.css */
+
+
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+.cart-item {
+  width: 100%;
+}
+
+.product-details img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+}

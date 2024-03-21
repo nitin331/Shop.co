@@ -1,27 +1,24 @@
-// Navbar.js
-
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
-import {
-  faBars,
-  faSearch,
-  faGrinHearts,
-  faEyeSlash,
-} from '@fortawesome/free-solid-svg-icons';
+import { faShoppingBasket, faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
+import Product from '../Product/Product';
 
 import './Navbar.css';
+
 
 const Navbar = () => {
   const [cartItems, setCartItems] = useState([]);
   const [showCart, setShowCart] = useState(false);
- 
 
   const toggleCart = () => {
     setShowCart(!showCart);
   };
 
- 
+  const addToCart = (product) => {
+    const updatedCart = [...cartItems, { name: product.name, price: product.price }];
+    setCartItems(updatedCart);
+    console.log(`Added ${product.name} to cart. Price: ${product.price}`);
+  };
 
   return (
     <div>
@@ -46,15 +43,17 @@ const Navbar = () => {
           <div><FontAwesomeIcon className="fa-icon" icon={faBars} /></div>
         </div>
       </header>
-
+      <Product addToCart={addToCart}/>
       {showCart && (
         <div className="cart-section">
           {cartItems.length > 0 ? (
-            <ul>
+            <div className="cart-box">
               {cartItems.map((item, index) => (
-                <li key={index}>{item.name} - {item.price}</li>
+                <div key={index} className="cart-item">
+                  <span>{item.name}</span> - <span>{item.price}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           ) : (
             <p>Your cart is empty.</p>
           )}
