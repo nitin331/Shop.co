@@ -13,7 +13,7 @@ h2 {
 }
 
 .cart p {
-    margin-left: 63%; /* Instead of fixed value, use relative positioning */
+    margin-left: 62%; /* Instead of fixed value, use relative positioning */
     transform: translateX(-50%); /* Center align horizontally */
 }
 
@@ -29,7 +29,7 @@ h2 {
     margin: 20px auto; /* Center align horizontally with top margin */
     cursor: pointer;
     width: 100px;
-    border-radius: 5px;
+    border-radius: 18px;
 }
 
 .add1:hover {

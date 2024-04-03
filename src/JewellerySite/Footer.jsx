@@ -21,9 +21,9 @@ const Footer = () => {
       <div className="footer-links">
         <h2>Categories</h2>
         <ul>
-          <li><a href="/bracelets">Bracelets</a></li>
+          <li><a href="/bracelet">Bracelets</a></li>
           <li><a href="/rings">Rings</a></li>
-          <li><a href="/pendants">Pendants</a></li>
+          <li><a href="/pendant">Pendants</a></li>
           <li><a href="/earrings">Earrings</a></li>
           <li><a href="/tennis-bracelets">Tennis Bracelets</a></li>
           <li><a href="/mens-collection">Men's Collection</a></li>

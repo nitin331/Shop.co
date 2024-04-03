@@ -13,11 +13,15 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
+import IconButton from '@mui/material/IconButton';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import './Bracelet.css';
 
-const BraceletProducts = ({ products, addToCart }) => {
+const EarringProducts = ({ products, addToCart }) => {
   const [open, setOpen] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+  const [cartItems, setCartItems] = useState([]);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -27,8 +31,21 @@ const BraceletProducts = ({ products, addToCart }) => {
     if (reason === 'clickaway') {
       return;
     }
-
     setSnackbarOpen(false);
+  };
+
+  const handleAddToCart = (product) => {
+    const alreadyInCart = cartItems.some((item) => item.id === product.id);
+
+    if (alreadyInCart) {
+      setSnackbarMessage('Item is already in the cart.');
+    } else {
+      setCartItems([...cartItems, product]);
+      addToCart(product);
+      setSnackbarMessage('Item has been added to the cart.');
+    }
+
+    setSnackbarOpen(true);
   };
 
   const DrawerList = (
@@ -60,16 +77,11 @@ const BraceletProducts = ({ products, addToCart }) => {
     </Box>
   );
 
-  const handleAddToCart = (product) => {
-    addToCart(product);
-    setSnackbarOpen(true);
-  };
-
   return (
     <div>
       <div className="container">
         <center>
-          <h1>Earring</h1>
+          <h1>Earrings</h1>
         </center>
         <div className="btn">
           <Button onClick={toggleDrawer(true)}>Filter</Button>
@@ -84,19 +96,25 @@ const BraceletProducts = ({ products, addToCart }) => {
             <img src={product.imageUrl} className="card-img-top" alt={product.name} height={'100PX'} width={'60%'}></img>
             <div className="card-body">
               <h4 className="card-title">{product.name}</h4>
-              <p className="card-text">Price: ₹{product.price}</p>
+              <p className="card-text">Price: ₹{product.price} /-</p>
+              <div className="actions">
               <AddToCart product={product} addToCart={() => handleAddToCart(product)} />
+                <IconButton className='favicon' >
+                  <FavoriteBorderIcon />
+                </IconButton>
+                
+              </div>
             </div>
           </div>
         ))}
       </div>
       <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleSnackbarClose}>
         <MuiAlert onClose={handleSnackbarClose} severity="success" sx={{ width: '100%' }}>
-          Item has been added to the cart.
+          {snackbarMessage}
         </MuiAlert>
       </Snackbar>
     </div>
   );
 };
 
-export default BraceletProducts;
+export default EarringProducts;

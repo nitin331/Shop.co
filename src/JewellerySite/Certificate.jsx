@@ -5,7 +5,7 @@ import './Certificate.css'
 const Certificate = () => {
   return (
     <div className='cert'>
-     <img src='img/certificate.webp'></img>
+     <img src='img/certificate.webp' alt='cerificate'></img>
      <Footer/>
     </div>
   )

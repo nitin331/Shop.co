@@ -14,26 +14,8 @@
     margin-bottom: 20px; /* Adjust margin-bottom for desired spacing */
   }
 
-  .button {
-    background-color: #eea19b;
-    color: white;
-    width: 30%;
-    height: 50px;
-    margin: 0 auto; /* Center the div horizontally */
-    border-radius: 5px;
-    border-bottom: none;
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-}
-.button a {
-  text-decoration: none; /* Remove underline */
-}
 
-.button .btext {
-    margin: 0;
-    color: white; /* Reset margin to center the text */
-}
+
 
 .offerimg {
   width: 100%; /* Ensure the video takes the full width of its container */
@@ -54,23 +36,29 @@
 
 
 
+
+
 .button {
-  text-align: center;
-}
-
-.button a {
-  display: inline-block;
-  padding: 10px 20px; /* Adjust padding as needed */
-  color: #fff;
-  text-decoration: none;
+  background-color: #eea19b;
+  color: white;
+  width: 30%;
+  height: 50px;
+  margin: 0 auto; /* Center the div horizontally */
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-bottom: none;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  text-decoration: none !important; 
+  transition: opacity 0.3s ease;/* Remove underline */
 }
 
-
+.button:hover {
+  opacity: 0.7; /* Decrease opacity on hover */
+}
 
 @media (max-width: 768px) {
-  .button a {
+  .button {
     padding: 8px 16px; /* Adjust padding for smaller screens */
   }
 }

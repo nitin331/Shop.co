@@ -1,16 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faWhatsapp, faTwitter, faInstagram, faTelegram, faPinterest } from '@fortawesome/free-brands-svg-icons';
-import { faSearch, faHeart, faShoppingCart, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faHeart, faShoppingCart, faBars, faTimes, faTimesCircle, faUser } from '@fortawesome/free-solid-svg-icons'; // Import the user icon
 
 const Navbar = ({ cartCount }) => {
   const [showNav, setShowNav] = useState(window.innerWidth >= 769);
   const [showMobileNav, setShowMobileNav] = useState(false);
+  const [showSearchBox, setShowSearchBox] = useState(false);
+  const searchIconRef = useRef(null);
+  const searchBoxRef = useRef(null);
 
   const toggleNav = () => {
     setShowMobileNav(!showMobileNav);
+  };
+
+  const toggleSearchBox = () => {
+    setShowSearchBox(!showSearchBox);
   };
 
   useEffect(() => {
@@ -25,10 +32,12 @@ const Navbar = ({ cartCount }) => {
     };
   }, []);
 
+ 
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
-      <div className="social-icons">
+        <div className="social-icons">
           <a href="https://www.facebook.com/" className="social-icon"><FontAwesomeIcon icon={faFacebook} /></a>
           <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER" className="social-icon"><FontAwesomeIcon icon={faWhatsapp} /></a>
           <a href="https://twitter.com/" className="social-icon"><FontAwesomeIcon icon={faTwitter} /></a>
@@ -47,12 +56,28 @@ const Navbar = ({ cartCount }) => {
         </ul>
 
         <div className="navbar-icons">
-          <FontAwesomeIcon icon={faSearch} className="icon cart-icon" />
+          {showSearchBox ? (
+            <div ref={searchBoxRef} className="search-box-container">
+              <input type="text" placeholder="Search..." className="search-box" />
+              <FontAwesomeIcon icon={faTimesCircle} className="close-icon" onClick={toggleSearchBox} />
+            </div>
+          ) : (
+            <FontAwesomeIcon icon={faSearch} className="icon cart-icon" onClick={toggleSearchBox} ref={searchIconRef} />
+          )}
+
+          {/* User Icon */}
+        
+
+          <Link to='/wishlist'>
           <FontAwesomeIcon icon={faHeart} className="icon cart-icon" />
+          </Link>
           <Link to={'/cart'} className="cart-link">
             <FontAwesomeIcon icon={faShoppingCart} className="icon cart-icon" />
             {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-          </Link>
+           </Link>
+           <Link to='/signin'>
+           <FontAwesomeIcon icon={faUser} className="icon cart-icon" />
+           </Link>
           {showMobileNav ? (
             <FontAwesomeIcon icon={faTimes} className="icon" onClick={toggleNav} />
           ) : (

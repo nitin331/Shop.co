@@ -2,6 +2,23 @@
   margin-top: 50px;
 }
 
+.homeimg{
+  height: 700px;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+  .homeimg {
+    max-height: 300px; /* Adjust max height for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .homeimg {
+    max-height: 200px; /* Further adjust max height for even smaller screens */
+  }
+}
 
 .cardhead{
     text-align: center;

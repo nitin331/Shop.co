@@ -17,6 +17,7 @@ body {
   z-index: 1000; /* Ensure the navbar stays on top of other content */
 }
 
+
 .navbar-container {
   display: flex;
   flex-direction: column; /* Change flex direction to column */
@@ -215,15 +216,50 @@ body {
   color: maroon; /* Hover color for Instagram */
 }
 
-/* Add this CSS to style the cart count */
+.cart-link {
+  position: relative; /* Make the cart link container position relative */
+}
+
 .cart-count {
-  position: absolute;
-  top: -8px;
-  right: -8px;
+  position: absolute; /* Position the cart count absolutely */
+  top: -8px; /* Adjust the vertical position */
+  right: -8px; /* Adjust the horizontal position */
   background-color: white;
   color: black;
   border-radius: 50%;
   padding: 4px 8px;
   font-size: 12px;
+}
+
+@media screen and (max-width: 770px) {
+  .cart-count {
+    top: -6px; /* Adjust the vertical position for smaller screens */
+    right: -6px; /* Adjust the horizontal position for smaller screens */
+  }
+}
+
+
+
+
+
+
+.search-box-container {
+  position: relative;
+}
+
+.search-box {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 18px;
+  width: 180px; 
+}
+
+.close-icon {
+  position: absolute;
+  right: 8px;
+  top: 35%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
 }
 

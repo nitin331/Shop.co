@@ -13,8 +13,15 @@ import RingProducts from './JewellerySite/RingProducts';
 import TennisBraceletProducts from './JewellerySite/TennisBraceletProducts';
 import PendantProducts from './JewellerySite/PendantProducts';
 import Certificate from './JewellerySite/Certificate';
-
-
+import SignIn from './JewellerySite/SignIn';
+import Registration from './JewellerySite/Registration'
+import WishList from './JewellerySite/WishList';
+import About from './JewellerySite/Info/About';
+import Return from './JewellerySite/Info/Return';
+import ShippingPolicy from './JewellerySite/Info/ShippingPolicy'
+import BuybackPolicy from './JewellerySite/Info/BuybackPolicy'
+import PrivacyPolicy from './JewellerySite/Info/PrivacyPolicy'
+import TermsConditons from './JewellerySite/Info/TermsCondition'
 
 
 
@@ -681,6 +688,18 @@ const App = () => {
           <Route path="/pendant" element={<PendantProducts products={productsPage6} addToCart={addToCart} />} />
           <Route path="/cart" element={<CartPage cart={cart} removeFromCart={removeFromCart}/>} />
           <Route path="/certificate" element={<Certificate/>} />
+          <Route path="/signin" element={<SignIn/>} />
+          <Route path="/registration" element={<Registration/>} />
+          <Route path="/wishlist" element={<WishList/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/return-policy" element={<Return/>} />
+          <Route path="/shipping-policy" element={<ShippingPolicy/>} />
+          <Route path="/buyback-policy" element={<BuybackPolicy/>} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+          <Route path="/terms-conditions" element={<TermsConditons/>}/>
+          
+
+
          
         </Routes>
         

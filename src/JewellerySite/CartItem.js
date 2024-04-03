@@ -21,7 +21,7 @@ const CartItem = ({ product, removeFromCart, updateQuantity }) => {
       <img src={product.imageUrl} alt={product.name} width={'200px'} />
       <div className="cart-item-details">
         <h3>{product.name}</h3>
-        <h4>Price: ₹{product.price}</h4>
+        <h4>Price: ₹{product.price} /-</h4>
         <div className='qty'>
           <button onClick={decreaseQuantity}>-</button>
           <span>{quantity}</span>

@@ -44,7 +44,7 @@ h4 {
   margin-right: 30px; /* Adjust margin for smaller screens */
   margin-left: auto; /* Push button to the right */
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 18px;
 
 }
 
@@ -56,14 +56,15 @@ h4 {
 
 .qty {
   display: flex;
+  background-color: #a987a2;
   align-items: center;
   margin-left: auto; /* Align quantity section to the right */
   margin-right: 100px; /* Adjust margin for smaller screens */
   margin-bottom: 60px; /* Adjust margin for smaller screens */
-  border: 1px solid black;
+  color: white;
   height: 37px;
   max-width: 100px; /* Limit maximum width */
-  border-radius: 5px;
+  border-radius: 18px;
   
 }
 
@@ -71,15 +72,16 @@ h4 {
   background-color: #a987a2;
   color: white;
   border: none;
+  background: transparent;
   cursor: pointer;
   padding: 10px 14px;
-  font-size: 14px;
-  border-radius: 4px;
+  font-size: 15px;
+  border-radius: 18px;
+ 
 }
 
-.qty button:hover {
-  background-color: #eea19b;
-}
+
+
 
 .qty span {
   margin: 0 10px;

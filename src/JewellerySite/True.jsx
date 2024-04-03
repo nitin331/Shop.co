@@ -11,14 +11,12 @@ const True = () => {
         <img src="img/9.webp" alt="" className="diamond-image" />
         <img src="img/10.webp" alt="" className="diamond-image" />
       </div>
-      <div className='button'>
-        <Link to='/certificate'>
-        <div className='btext'>VIEW SAMPLE CERTIFICATE</div>
-        </Link>
+     
+      <Link to='/certificate' className='button'>VIEW SAMPLE CERTIFICATE</Link>
+        
+      <div className='offerimg'>
+        <img src='img/offer.webp' alt='offerdeal' />
       </div>
-     <div className='offerimg'>
-     <img src='img/offer.webp' alt='offerdeal'></img>
-     </div>
     </div>
   );
 }

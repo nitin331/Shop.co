@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CartItem from './CartItem';
 import './Cart.css';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'; // Import the faShoppingCart icon from the free-solid-svg-icons package
 
 const CartPage = ({ cart, removeFromCart }) => {
   // Calculate total price initially
@@ -28,9 +29,9 @@ const CartPage = ({ cart, removeFromCart }) => {
 
   return (
     <div className="cart">
-      <h2>Shopping Cart</h2>
+      <h2><ShoppingCartOutlinedIcon  fontSize="large"/>  Shopping Cart</h2>
       {cart.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <p>Your cart is empty " Shop Now ".</p>
       ) : (
         <div>
           {cart.map((product) => (
@@ -42,10 +43,10 @@ const CartPage = ({ cart, removeFromCart }) => {
             />
           ))}
           <div className="total-price">
-            <p>Total Price: ₹{totalPrice.toFixed(2)}</p>
+            <p>Total Price: ₹{totalPrice.toFixed(2)} /-</p>
           </div>
           <div className='add1'>
-           ORDER NOW
+            ORDER NOW
           </div>
         </div>
       )}
@@ -53,4 +54,4 @@ const CartPage = ({ cart, removeFromCart }) => {
   );
 };
 
-export default CartPage;
+export default CartPage;
