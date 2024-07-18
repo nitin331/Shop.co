@@ -17,7 +17,7 @@ import IconButton from '@mui/material/IconButton';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import './Bracelet.css';
 
-const PendantProducts = ({ products, addToCart }) => {
+const PendantProducts = ({ products, addToCart, addToWishlist }) => {
   const [open, setOpen] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
@@ -99,7 +99,7 @@ const PendantProducts = ({ products, addToCart }) => {
               <p className="card-text">Price: ₹{product.price} /-</p>
               <div className="actions">
               <AddToCart product={product} addToCart={() => handleAddToCart(product)} />
-                <IconButton className='favicon' >
+                <IconButton className='favicon' onClick={() => addToWishlist(product)}>
                   <FavoriteBorderIcon />
                 </IconButton>
                 </div>

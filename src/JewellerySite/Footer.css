@@ -1,38 +1,33 @@
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
-
 footer {
-  background-color: #F6F6F8;
-  color: #8787A4;
-  padding: 50px 0;
+  background-color: #1b2a33;
+  color: #ffffff;
+  padding: 50px 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.footer-info, .footer-links {
+.footer-info, .footer-links, .footer-social {
   flex: 1 1 300px;
-  margin: 0 20px;
+  margin: 20px;
 }
 
-.footer-info h2, .footer-links h2 {
+.footer-info h2, .footer-links h2, .footer-social h2 {
   font-size: 22px;
   margin-bottom: 20px;
-  color: #222222;
-
+  color: #ffffff;
 }
 
 .footer-info p, .footer-links p, .footer-info ul, .footer-links ul {
   margin-bottom: 20px;
   font-size: 16px;
-  margin-left: 100px;
-  
 }
 
 .footer-links ul, .footer-info ul {
   list-style: none;
   padding: 0;
-  margin-left: 150px;
 }
 
 .footer-links ul li, .footer-info ul li {
@@ -40,17 +35,32 @@ footer {
 }
 
 .footer-links ul li a, .footer-info ul li a {
-  color: #8787A4;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-links ul li a:hover, .footer-info ul li a:hover {
-  color: #6BD1E2;
+  color: #a4b5b9;
 }
 
-.footer-info p i {
-  margin-right: 5px;
+.footer-info p i, .footer-social i {
+  margin-right: 5px;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social .social-icons a {
+  color: #ffffff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.footer-social .social-icons a:hover {
+  color: #a4b5b9;
 }
 
 .copy {
@@ -59,8 +69,40 @@ footer {
   align-items: center;
   height: 50px;
   text-align: center;
+  background-color: #1b2a33;
+  color: #ffffff;
 }
-.copy span{
+
+.copy span {
   padding: 10px;
   color: #a987a2;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer-info, .footer-links, .footer-social {
+    margin: 0px 0;
+
+  }
+
+  .footer-info h2, .footer-links h2, .footer-social h2 {
+    font-size: 18px;
+  }
+
+  .footer-info p, .footer-links p, .footer-info ul, .footer-links ul {
+    font-size: 14px;
+  }
+
+  .footer-social .social-icons a {
+    font-size: 20px;
+  }
+
+  .copy {
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  .info {
+    margin-right: 50px;
+  }
 }

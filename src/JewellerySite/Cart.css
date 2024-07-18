@@ -41,3 +41,7 @@ h2 {
     margin-right: 100px
    
 }
+
+.cart-item {
+    border-bottom: 1px solid #ccc; /* Adjust the color as needed */
+}

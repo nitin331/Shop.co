@@ -1,0 +1,30 @@
+.shacara-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    font-family: Arial, sans-serif;
+    color: #333;
+   
+  }
+  
+  .shacara-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .shacara-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .shacara-container strong {
+    font-weight: bold;
+  }
+  

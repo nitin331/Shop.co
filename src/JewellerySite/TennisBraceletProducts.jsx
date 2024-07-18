@@ -1,23 +1,12 @@
 import React, { useState } from 'react';
 import AddToCart from './AddToCart';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import IconButton from '@mui/material/IconButton';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import './Bracelet.css';
 
-const TennisBraceletProducts = ({ products, addToCart }) => {
+const TennisBraceletProducts = ({ products, addToCart, addToWishlist }) => {
   const [open, setOpen] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
@@ -48,34 +37,7 @@ const TennisBraceletProducts = ({ products, addToCart }) => {
     setSnackbarOpen(true);
   };
 
-  const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-      <div>Filter</div>
-      <Divider />
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-    </Box>
-  );
+ 
 
   return (
     <div>
@@ -83,12 +45,6 @@ const TennisBraceletProducts = ({ products, addToCart }) => {
         <center>
           <h1>Tennis Bracelet</h1>
         </center>
-        <div className="btn">
-          <Button onClick={toggleDrawer(true)}>Filter</Button>
-          <Drawer open={open} onClose={toggleDrawer(false)}>
-            {DrawerList}
-          </Drawer>
-        </div>
       </div>
       <div className="card-container">
         {products.map((product, index) => (
@@ -99,7 +55,7 @@ const TennisBraceletProducts = ({ products, addToCart }) => {
               <p className="card-text">Price: ₹{product.price} /-</p>
               <div className="actions">
               <AddToCart product={product} addToCart={() => handleAddToCart(product)} />
-                <IconButton className='favicon' >
+                <IconButton className='favicon' onClick={() => addToWishlist(product)}>
                   <FavoriteBorderIcon />
                 </IconButton>
                 </div>

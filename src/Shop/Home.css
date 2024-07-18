@@ -1,0 +1,410 @@
+/* MainComponent.css */
+
+.banner-image-container {
+  width: 100%;
+  display: flex;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.banner-image {
+  width: 100%;
+  height: auto; /* Ensures the image scales correctly */
+  max-width: 100%; /* Limits the maximum width */
+}
+
+.brand-logos-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.brand-logo {
+  color: white;
+  font-size: 24px;
+  font-family: 'Arial, sans-serif'; /* Default font */
+  margin: 5px; /* Add some spacing between logos */
+}
+
+.brand-logo:nth-child(1) {
+  font-family: 'Times New Roman', Times, serif; /* Versace */
+}
+
+.brand-logo:nth-child(2) {
+  font-family: 'Arial, Helvetica, sans-serif'; /* Zara */
+}
+
+.brand-logo:nth-child(3) {
+  font-family: 'Times New Roman', Times, serif; /* Gucci */
+}
+
+.brand-logo:nth-child(4) {
+  font-family: 'Times New Roman', Times, serif; /* Prada */
+}
+
+.brand-logo:nth-child(5) {
+  font-family: 'Arial, Helvetica, sans-serif'; /* Calvin Klein */
+}
+
+@media (max-width: 768px) {
+  .brand-logo {
+    font-size: 20px; /* Reduce font size on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo {
+    font-size: 16px; /* Reduce font size on mobile devices */
+  }
+}
+
+
+
+.new-arrivals {
+  text-align: center;
+  padding: 20px;
+}
+
+.product-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+.product {
+  background-color: #f0f0f0;  /* Grey background for the entire product card */
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  width: 220px; /* Default width */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.product img {
+  transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+  width: 100%;
+  height: 200px; /* Default height */
+  background-color: #fff; /* White background for the image div */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product img:hover {
+  transform: scale(1.1);
+}
+
+.product h2 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.price .original-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 5px;
+  position: relative;
+  right: 30px;
+}
+
+.price .discounted-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  position: relative;
+  left: 15px;
+  bottom: 22px;
+}
+
+.price .discount {
+  color: #d9534f;
+  font-weight: bold;
+ position: relative;
+  bottom: 43px;
+  
+}
+
+.view-all {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+.view-all:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    justify-content: space-between;
+  }
+
+  .product {
+    width: 48%; /* Adjust to fit two cards in one row */
+    height: auto; /* Allow height to adjust automatically */
+  }
+
+  .product img {
+    height: 150px; /* Adjust as needed for smaller screens */
+  }
+
+  .product h2 {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .rating, .price {
+    font-size: 12px; /* Reduce font size for smaller screens */
+  }
+
+  .price .discounted-price {
+    font-size: 16px; /* Reduce font size for smaller screens */
+  }
+
+  .view-all {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list {
+    justify-content: space-between; /* Ensure spacing between the cards */
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+
+  .product {
+    width: 38%; /* Adjust to fit two cards in one row */
+    height: auto; /* Allow height to adjust automatically */
+    margin-bottom: 10px; /* Add margin to create space between rows */
+  }
+
+  .product img {
+    height: 120px; /* Adjust as needed for smaller screens */
+  }
+
+  .product h2 {
+    font-size: 12px; /* Reduce font size for smaller screens */
+  }
+
+  .rating, .price {
+    font-size: 10px; /* Reduce font size for smaller screens */
+  }
+
+  .price .discounted-price {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .view-all {
+    font-size: 12px; /* Reduce font size for smaller screens */
+  }
+}
+
+
+
+
+
+
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  height: 100%;
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  border-radius: 50px;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.header {
+  padding: 20px 0;
+  border-radius: 50px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+}
+
+.grid-item {
+  background-color: #e0e0e0;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-item.casual {
+  background-image: url('https://img.freepik.com/free-photo/portrait-handsome-confident-model-sexy-stylish-man-fashion-hipster-male-posing-near-wall-studio-isolated_158538-23697.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.grid-item.formal {
+  background-image: url('https://img.freepik.com/premium-photo/man-face-portrait-banner-with-copy-space-his-look-is-great-entrepreneur-manager-male-formal-fashion-professional-unshaven-ceo_545934-30095.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.grid-item.party {
+  background-image: url('https://media.istockphoto.com/id/915320148/photo/elegant-young-woman-is-looking-away-smiling-and-thinking.jpg?s=612x612&w=0&k=20&c=n2FD9mwA7bIU2ys8M3XM2L9Y_wlmVVOFcRtdF9RkUJc=');
+  background-size: cover;
+  background-position: center;
+}
+
+.grid-item.gym {
+  background-image: url('https://www.gymclothes.com/wp-content/uploads/2020/02/private-label.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.grid-item span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 300px);
+  }
+
+  .grid-item.casual {
+    grid-column: 1 / span 1;
+  }
+
+  .grid-item.formal {
+    grid-column: 2 / span 3;
+  }
+
+  .grid-item.party {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 1;
+  }
+
+  .grid-item.gym {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
+  }
+}
+
+@media (max-width: 1199px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-item {
+    height: 200px;
+  }
+
+  .grid-item.casual {
+    grid-column: span 2;
+  }
+
+  .grid-item.formal {
+    grid-column: span 2;
+  }
+
+  .grid-item.party {
+    grid-column: span 2;
+  }
+
+  .grid-item.gym {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item {
+    height: 150px;
+  }
+} 
+
+.slider h1{
+   margin-left: 20px;
+}
+
+.review-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;  /* Center-align text content */
+}
+
+.stars {
+  color: gold;
+  font-size: 1.2em;
+}
+
+.reviewer {
+  display: flex;
+  justify-content: center;  /* Center-align flex items */
+  align-items: center;
+  margin: 10px 0;
+}
+
+.reviewer-name {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.verified {
+  color: green;
+}
+
+.review-text {
+  font-style: italic;
+  color: #555;
+  padding: 10px 20px;  /* Add padding to the left and right sides */
+}

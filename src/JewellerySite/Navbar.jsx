@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faWhatsapp, faTwitter, faInstagram, faTelegram, faPinterest } from '@fortawesome/free-brands-svg-icons';
 import { faSearch, faHeart, faShoppingCart, faBars, faTimes, faTimesCircle, faUser } from '@fortawesome/free-solid-svg-icons'; // Import the user icon
 
 const Navbar = ({ cartCount }) => {
@@ -32,27 +31,17 @@ const Navbar = ({ cartCount }) => {
     };
   }, []);
 
- 
-
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="social-icons">
-          <a href="https://www.facebook.com/" className="social-icon"><FontAwesomeIcon icon={faFacebook} /></a>
-          <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER" className="social-icon"><FontAwesomeIcon icon={faWhatsapp} /></a>
-          <a href="https://twitter.com/" className="social-icon"><FontAwesomeIcon icon={faTwitter} /></a>
-          <a href="https://telegram.com/" className="social-icon"><FontAwesomeIcon icon={faTelegram} /></a>
-          <a href="https://pinterst.com/" className="social-icon"><FontAwesomeIcon icon={faPinterest} /></a>
-          <a href="https://instagram.com/" className="social-icon"><FontAwesomeIcon icon={faInstagram} /></a>
-        </div>
-        <div className="site-name"><Link to="/" className="nav-link">MIMILUX</Link></div>
+        <div className="site-name"><Link to="/" className="nav-link">SpareDrive Solutions</Link></div>
         <ul className={`nav-items ${showNav || showMobileNav ? 'show' : 'hide'}`}>
-          <li className="nav-item"><a href="/bracelet" className="nav-link">Bracelets</a></li>
-          <li className="nav-item"><a href="/rings" className="nav-link">Rings</a></li>
-          <li className="nav-item"><a href="/pendant" className="nav-link">Pendants</a></li>
-          <li className="nav-item"><a href="/earrings" className="nav-link">Earrings</a></li>
-          <li className="nav-item"><a href="/tennis-bracelets" className="nav-link">Tennis Bracelets</a></li>
-          <li className="nav-item"><a href="mens-collection" className="nav-link">Men's Collection</a></li>
+          <li className="nav-item"><a href="/bracelet" className="nav-link">Clutch System</a></li>
+          <li className="nav-item"><a href="/rings" className="nav-link">Bearings</a></li>
+          <li className="nav-item"><a href="/pendant" className="nav-link">Ac Parts</a></li>
+          <li className="nav-item"><a href="/earrings" className="nav-link">Filters</a></li>
+          <li className="nav-item"><a href="/tennis-bracelets" className="nav-link">Engine Parts </a></li>
+          <li className="nav-item"><a href="mens-collection" className="nav-link">Maintenance service</a></li>
         </ul>
 
         <div className="navbar-icons">
@@ -65,19 +54,16 @@ const Navbar = ({ cartCount }) => {
             <FontAwesomeIcon icon={faSearch} className="icon cart-icon" onClick={toggleSearchBox} ref={searchIconRef} />
           )}
 
-          {/* User Icon */}
-        
-
           <Link to='/wishlist'>
-          <FontAwesomeIcon icon={faHeart} className="icon cart-icon" />
+            <FontAwesomeIcon icon={faHeart} className="icon cart-icon" />
           </Link>
           <Link to={'/cart'} className="cart-link">
             <FontAwesomeIcon icon={faShoppingCart} className="icon cart-icon" />
             {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
-           </Link>
-           <Link to='/signin'>
-           <FontAwesomeIcon icon={faUser} className="icon cart-icon" />
-           </Link>
+          </Link>
+          <Link to='/signin'>
+            <FontAwesomeIcon icon={faUser} className="icon cart-icon" />
+          </Link>
           {showMobileNav ? (
             <FontAwesomeIcon icon={faTimes} className="icon" onClick={toggleNav} />
           ) : (

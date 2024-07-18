@@ -25,7 +25,7 @@ const SignIn = () => {
       <section className="auth-container">
         <h2>Sign In</h2>
         <form onSubmit={handleSignIn}>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email :</label>
           <input
             type="email"
             value={email}
@@ -33,7 +33,7 @@ const SignIn = () => {
             required
           />
 
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Password :</label>
           <input
             type="password"
             value={password}

@@ -14,6 +14,11 @@
     max-width: 1200px; /* Adjust as needed */
   }
   
+
+  .search{
+    color: blueviolet;
+    font-weight: 1300;
+  }
   
   .sing {
     display: flex;
@@ -23,9 +28,25 @@
     margin: 0 auto;
     max-width: 1200px;
   }
+  .image-container img {
+    display: block; /* Remove bottom margin/gap */
+    width: 100%; /* Make the image take the full width of the container */
+    border-radius: 8px; /* Match the container's rounded corners */
+  }
+  
+  .image-container:hover {
+    box-shadow: 0 8px 16px rgba(255, 4, 4, 0.2); /* Increase shadow on hover */
+  }
   
   .image-container {
     position: relative;
+    display: inline-block; /* To keep the image containers in line */
+    margin: 20px; /* Add some spacing around the image containers */
+    position: relative; /* To position the auto-name text within the container */
+    box-shadow: 0 4px 8px rgba(245, 2, 2, 0.1); /* Light shadow effect */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for shadow effect */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    overflow: hidden; /* To ensure child elements are contained within the container */
   }
   
   .image-title {
@@ -35,7 +56,7 @@
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: rgb(88, 11, 119);
     padding: 5px;
     border-radius: 5px;
   }
@@ -82,7 +103,7 @@
 
   .image-container1 {
     position: relative;
-    width: 100%;
+    width: 500%;
     max-width: 1020px; /* Adjust as per your design */
     margin: auto; /* Centers the image */
   }
@@ -92,4 +113,117 @@
     height: auto;
     border-radius: 20px;
   }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    flex-wrap: wrap; /* Allow the images to wrap to the next line */
+    margin-bottom: 20px; /* Add some bottom margin to separate rows */
+  }
+  
+  .image-container {
+    margin: 0 10px; /* Add some horizontal margin between images */
+    width: 200px; /* Set a fixed width for all images */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  .auto-name{
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .image-title {
+    text-align: center;
+    margin-top: 10px; /* Add some top margin to separate image title */
+  }
+  
+  .ping {
+    margin-bottom: 20px; /* Add some bottom margin to separate the last row */
+  }
+  
+  .bespoke {
+    margin-top: 20px; /* Add some top margin to separate the "BESPOKE JEWELLERY" heading */
+  }
+  
+  .video-container {
+    margin-bottom: 20px; /* Add some bottom margin to separate the video container */
+  }
+  
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .heading h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.1);
+  }
+  
+  .image-title {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #4c6c80;
+  }
+  
+  .ping img {
+    width: 400px;
+    height: auto;
+  }
+  
+  .bespoke h2 {
+    margin: 20px 0;
+  }
+  
+  .video-container video {
+    width: 400px;
+    height: auto;
+  }
+  
   

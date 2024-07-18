@@ -17,7 +17,7 @@ import IconButton from '@mui/material/IconButton';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import './Bracelet.css';
 
-const RingProducts = ({ products, addToCart }) => {
+const RingProducts = ({ products, addToCart, addToWishlist }) => {
   const [open, setOpen] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
@@ -81,14 +81,9 @@ const RingProducts = ({ products, addToCart }) => {
     <div>
       <div className="container">
         <center>
-          <h1>Rings</h1>
+          <h1>Alloy Wheels Parts</h1>
         </center>
-        <div className="btn">
-          <Button onClick={toggleDrawer(true)}>Filter</Button>
-          <Drawer open={open} onClose={toggleDrawer(false)}>
-            {DrawerList}
-          </Drawer>
-        </div>
+        
       </div>
       <div className="card-container">
         {products.map((product, index) => (
@@ -96,10 +91,10 @@ const RingProducts = ({ products, addToCart }) => {
             <img src={product.imageUrl} className="card-img-top" alt={product.name} height={'100PX'} width={'60%'}></img>
             <div className="card-body">
               <h4 className="card-title">{product.name}</h4>
-              <p className="card-text">Price: ₹{product.price} /-</p>
+            
               <div className="actions">
               <AddToCart product={product} addToCart={() => handleAddToCart(product)} />
-                <IconButton className='favicon' >
+                <IconButton className='favicon' onClick={() => addToWishlist(product)} >
                   <FavoriteBorderIcon />
                 </IconButton>
                 </div>

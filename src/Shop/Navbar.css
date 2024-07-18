@@ -1,0 +1,146 @@
+
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  flex-wrap: wrap;
+}
+
+.navbar-brand a {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+
+.navbar-item .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.navbar-item:hover .dropdown {
+  display: block;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar-search input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 18px;
+  width: 400px;
+  height: 30px;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-icons a {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 24px; /* Set the desired size */
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1024px) {
+  .navbar-search input {
+    width: 300px;
+  }
+
+  .navbar-item a {
+    font-size: 18px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-search input {
+    width: 200px;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand a {
+    font-size: 20px;
+  }
+
+  .navbar-search input {
+    width: 150px;
+  }
+
+  .navbar-item a {
+    font-size: 16px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+}
