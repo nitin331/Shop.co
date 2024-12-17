@@ -45,7 +45,7 @@ const ProductDetailPage = () => {
           price: 240,
           rating: 4,
           image: 'https://i.pinimg.com/564x/a7/e3/70/a7e3707ac6f504214fc0cc8cb7aaf24d.jpg',
-          discount: "20%",
+          discount: null,
           description: ' Skinny jeans are the slimmest jean style, designed to form a sleek silhouette that shows off the leg.',
           colors: ["#4d4d33", "#0f4d4d", "#0f0f4d"],
           sizes: ["S", "M", "L", "X-L"],
@@ -73,7 +73,7 @@ const ProductDetailPage = () => {
         },
         {
           id: 4,
-          name: 'Tape Details',
+          name: 'Sleeve Striped T-shirt',
           price: 120,
           rating: 4,
           image: 'https://i.pinimg.com/564x/7f/4a/24/7f4a242475ec5f72feeaea95c6316931.jpg',
@@ -89,7 +89,7 @@ const ProductDetailPage = () => {
         },
         {
           id: 5,
-          name: 'Tape Details',
+          name: 'Vertical Striped Shirt',
           price: 120,
           rating: 4,
           image: 'https://i.pinimg.com/564x/ea/21/20/ea2120f0447487d1d740dde7c2bd60f4.jpg',
@@ -98,14 +98,14 @@ const ProductDetailPage = () => {
           colors: ["#4d4d33", "#0f4d4d", "#0f0f4d"],
           sizes: ["S", "M", "L", "X-L"],
           images: [
-            "https://example.com/image1.jpg",
-            "https://example.com/image2.jpg",
-            "https://example.com/image3.jpg",
+            "https://i.pinimg.com/564x/dd/f5/eb/ddf5eb2ff06437eb2399308eebd0d52b.jpg",
+            " https://i.pinimg.com/564x/3b/2c/dd/3b2cddbe8450e8b1c6f53d3292199cfa.jpg",
+            " https://i.pinimg.com/564x/fd/3a/9b/fd3a9b3cfa2d69d1ab58983eeee6aa20.jpg",
           ],
         },
         {
           id: 6,
-          name: 'ONE LIFE GRAPHIC T-SHIRT',
+          name: 'CORUAGE GRAPHIC T-SHIRT',
           price: 120,
           rating: 4,
           image: GraphicTshirt,
@@ -117,7 +117,7 @@ const ProductDetailPage = () => {
         },
         {
           id: 7,
-          name: 'Tape Details',
+          name: 'Loose Fit Bermuda Shorts',
           price: 120,
           rating: 4,
           image: 'https://i.pinimg.com/564x/ea/21/20/ea2120f0447487d1d740dde7c2bd60f4.jpg',
@@ -126,14 +126,14 @@ const ProductDetailPage = () => {
           colors: ["#4d4d33", "#0f4d4d", "#0f0f4d"],
           sizes: ["S", "M", "L", "X-L"],
           images: [
-            "https://example.com/image1.jpg",
-            "https://example.com/image2.jpg",
-            "https://example.com/image3.jpg",
+            "https://i.pinimg.com/564x/17/9d/75/179d75c0c37acc7f883539639dea55dc.jpg ",
+            " https://i.pinimg.com/564x/a2/91/bf/a291bf378f265efa7cc0a1925043e328.jpg",
+            "https://i.pinimg.com/564x/d1/f6/ec/d1f6ec243a42f6130fe58cef6c109c40.jpg ",
           ],
         },
         {
           id: 8,
-          name: 'Gradient Graphic T-shirt',
+          name: 'Faded Skinny Jeans',
           price: 120,
           rating: 4,
           image: 'https://i.pinimg.com/564x/ea/21/20/ea2120f0447487d1d740dde7c2bd60f4.jpg',
@@ -142,9 +142,9 @@ const ProductDetailPage = () => {
           colors: ["#4d4d33", "#0f4d4d", "#0f0f4d"],
           sizes: ["S", "M", "L", "X-L"],
           images: [
-            "https://example.com/image1.jpg",
-            "https://example.com/image2.jpg",
-            "https://example.com/image3.jpg",
+            "https://i.pinimg.com/564x/1a/23/ca/1a23caf45b3df2935cdef0deca4e3c0c.jpg ",
+            "https://i.pinimg.com/564x/79/0d/da/790dda21ae9d5187e33881ee834699f0.jpg ",
+            " https://i.pinimg.com/564x/a9/8a/2d/a98a2d32f6d914f578d3182012d53622.jpg",
           ],
         },
         {
@@ -158,9 +158,9 @@ const ProductDetailPage = () => {
           colors: ["#4d4d33", "#0f4d4d", "#0f0f4d"],
           sizes: ["S", "M", "L", "X-L"],
           images: [
-            "https://example.com/image1.jpg",
-            "https://example.com/image2.jpg",
-            "https://example.com/image3.jpg",
+            "https://i.pinimg.com/564x/cb/0b/81/cb0b81503d20ce8f4b02904a76200747.jpg",
+            " https://i.pinimg.com/736x/40/3b/a4/403ba48fd33f5a8c637c0459e5d1d4f8.jpg",
+            "https://i.pinimg.com/564x/bc/f5/47/bcf54758950a301167896d16fb64a26d.jpg",
           ],
         },
         {
@@ -174,9 +174,9 @@ const ProductDetailPage = () => {
           colors: ["#4d4d33", "#0f4d4d", "#0f0f4d"],
           sizes: ["S", "M", "L", "X-L"],
           images: [
-            "https://example.com/image1.jpg",
-            "https://example.com/image2.jpg",
-            "https://example.com/image3.jpg",
+            "https://i.pinimg.com/564x/ee/da/29/eeda2988d6b0ab08eff222e9517cd753.jpg ",
+            "https://i.pinimg.com/564x/57/0e/9c/570e9cb81b0522684398841324e58532.jpg ",
+            "https://i.pinimg.com/564x/3f/c3/6c/3fc36c8f946c2e04dfa956b3dc4b521d.jpg",
           ],
         },
         {
@@ -190,9 +190,9 @@ const ProductDetailPage = () => {
           colors: ["#4d4d33", "#0f4d4d", "#0f0f4d"],
           sizes: ["S", "M", "L", "X-L"],
           images: [
-            "https://example.com/image1.jpg",
-            "https://example.com/image2.jpg",
-            "https://example.com/image3.jpg",
+            "https://i.pinimg.com/564x/3e/09/99/3e099952e49667ed398a14f493b991d8.jpg",
+            "https://i.pinimg.com/564x/cf/8d/1f/cf8d1f665d1337ece1aa143c3c8640a5.jpg",
+            "https://i.pinimg.com/564x/7d/c9/65/7dc965ff55f85bdc7f40d97ffe35d7ec.jpg",
           ],
         },
         
