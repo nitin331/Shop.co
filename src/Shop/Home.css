@@ -378,6 +378,7 @@
   align-items: center;
   margin: 10px; /* Space between cards */
   transition: transform 0.2s; /* Animation for hover effect */
+  flex: 1 1 300px; /* Allow cards to grow and shrink */
 }
 
 .card:hover {
@@ -421,12 +422,38 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .card {
-    margin: 5px; /* Adjust margin for smaller screens */
+    flex: 1 1 100%; /* Full width for cards on small screens */
+    margin: 10px 0; /* Adjust margin for better spacing */
+  }
+
+  .review {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  .review-text {
+    font-size: 14px; /* Smaller font size for review text */
+  }
+
+  .reviewer-name {
+    font-size: 14px; /* Smaller font size for reviewer name */
   }
 }
 
 @media (max-width: 480px) {
   .review {
-    padding: 15px; /* Reduce padding on small screens */
+    padding: 10px; /* Further reduce padding for extra small screens */
+  }
+
+  .review-text {
+    font-size: 12px; /* Further reduce font size for review text */
+  }
+
+  .reviewer-name {
+    font-size: 12px; /* Further reduce font size for reviewer name */
+  }
+
+  .card {
+    margin: 20px 0; /* Adjust margin for extra small screens */
+    flex: 1 1 calc(50% - 20px);
   }
 }
