@@ -1,77 +1,78 @@
+/* Casual.css */
 .app {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #fff;
-  }
-  
-  h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .products-container {
-    display: flex;
-    margin-left: 200px;
-    gap: 20px;
-  }
-  
-  .productcard {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    text-align: center;
-    width: 200px;
-    height: 400px;
-  }
-  
-  .productcard img {
-   width: 200px;
-    height: 260px;
-    background-color: #ddd;
-    margin-bottom: 10px;
-    border-radius: 15px;
-  }
-  
-  .productcard h3 {
-    height: 35px;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-  }
-  
-  .rating {
-    font-size: 1em;
-    margin-bottom: 10px;
-  }
-  
-  .price {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-  
-  .original-price {
-    text-decoration: line-through;
-    color: #999;
-    margin-right: 10px;
-  }
-  
-  .discount-price {
-    color: #e60000;
-    position: relative;
-    left: 30px;
-    bottom: 22px;
-  }
-  
-  .discount {
-    background-color: #ffcccc;
-    color: #e60000;
-    font-size: 0.9em;
-    padding: 2px 5px;
-    border-radius: 4px;
-  }
-  
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #fff;
+}
 
-  /* src/FilterComponent.css */
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: 200px; /* For larger screens */
+}
+
+.productcard {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  height: 400px;
+}
+
+.productcard img {
+  width: 200px;
+  height: 260px;
+  background-color: #ddd;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.productcard h3 {
+  height: 35px;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.rating {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+}
+
+.discount-price {
+  color: #e60000;
+  position: relative;
+  left: 30px;
+  bottom: 22px;
+}
+
+.discount {
+  background-color: #ffcccc;
+  color: #e60000;
+  font-size: 0.9em;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+/* Filter CSS */
 .filter-container {
   width: 250px;
   padding: 20px;
@@ -101,17 +102,25 @@
   margin-bottom: 10px;
 }
 
+.filter-button {
+  display: none; /* Initially hidden */
+}
+
 .price-values {
   display: flex;
   justify-content: space-between;
 }
 
-.colors, .sizes, .styles {
+.colors,
+.sizes,
+.styles {
   display: flex;
   flex-wrap: wrap;
 }
 
-.color-box, .size-box, .style-box {
+.color-box,
+.size-box,
+.style-box {
   width: 30px;
   height: 30px;
   margin: 5px;
@@ -122,11 +131,14 @@
   border-radius: 4px;
 }
 
-.color-box.selected, .size-box.selected, .style-box.selected {
+.color-box.selected,
+.size-box.selected,
+.style-box.selected {
   border: 2px solid #000;
 }
 
-.size-box, .style-box {
+.size-box,
+.style-box {
   width: auto;
   padding: 5px 10px;
   border: 1px solid #ddd;
@@ -145,4 +157,64 @@
 
 .apply-button:hover {
   background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .products-container {
+    margin-left: 0; /* Remove left margin for mobile */
+  }
+
+  .productcard {
+    width: calc(40% - 10px); /* Adjust width to fit two cards per row */
+    height: 360px; /* Adjust height for better layout */
+  }
+
+  .productcard img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto;
+  }
+
+  .productcard h3 {
+    font-size: 1em; /* Adjust heading size */
+  }
+
+  .rating {
+    font-size: 0.8em; /* Adjust rating font size */
+  }
+
+  /* Ensure the filter container is not shown on mobile */
+  .filter-container {
+    display: none; /* Completely hide filter container */
+  }
+
+  /* Show filter button on larger screens only */
+  .filter-button {
+    display: block; /* Display filter button on larger screens */
+    width: 15%;
+    height: 40px;
+    padding: 10px;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 10px 0;
+    position: relative;
+    top: 40px;
+  }
+
+  .filter-button:hover {
+    background-color: #0045; /* Ensure hover effect for the button */
+    color: #fff;
+  }
+
+  /* If you later decide to show filter options on mobile, uncomment the following */
+  /* .filter-container.show { */
+  /*   display: block; */
+  /*   width: 50%; */
+  /*   height: auto; */
+  /*   position: static; */
+  /*   margin: 45px 0; */
+  /* } */
 }
