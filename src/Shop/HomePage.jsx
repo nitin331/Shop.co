@@ -209,69 +209,56 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-     <div className="slider">
-     <h1>OUR HAPPY CUSTOMERS</h1>
-     <Slider {...settings}>
-      
-        <div className='card'>
-         
-         <div className='review'>
-          <div className='review-text'>
+      <div className="slider">
+  <h1>OUR HAPPY CUSTOMERS</h1>
+  <Slider {...settings}>
+    <div className='card'>
+      <div className='review'>
+        <div className='review-text'>
           <Stack spacing={1}>
-      <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
-    </Stack>
-            <p>"Great service! The team at SpareDrive Solutions helped me find the right spare parts for my car quickly and efficiently."</p>
-            <p><strong>- Sia Doe</strong></p>
-          </div>
+            <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
+          </Stack>
+          <p>"Great service! The team at SpareDrive Solutions helped me find the right spare parts for my car quickly and efficiently."</p>
+          <p><strong>- Sia Doe</strong></p>
         </div>
-        </div>
-        <div className='card'>
-         
-         <div className='review'>
-          <div className='review-text'>
-          <Stack spacing={1}>
-      <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
-    </Stack>
-            <p>"Great service! The team at SpareDrive Solutions helped me find the right spare parts for my car quickly and efficiently."</p>
-            <p><strong>- Sia Doe</strong></p>
-          </div>
-        </div>
-        </div>
-        <div className='card'>
-        <div className='review'>
-          <div className='review-text'>
-          <Stack spacing={1}>
-      <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
-    </Stack>
-            <p>"Great service! The team at SpareDrive Solutions helped me find the right spare parts for my car quickly and efficiently."</p>
-            <p><strong>- Sia Doe</strong></p>
-          </div>
-        </div>
-        
-        </div>
-        <div className='card'>
-        <div className='review'>
-          <div className='review-text'>
-          <Stack spacing={1}>
-      <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
-    </Stack>
-            <p>"Great service! The team at SpareDrive Solutions helped me find the right spare parts for my car quickly and efficiently."</p>
-            <p><strong>- Sia Doe</strong></p>
-          </div>
-        </div>
-        
-        </div>
-        <div className='card'>
-        <div className="reviewer">
-        <span className="reviewer-name">Alex K.</span>
-        <span className="verified">&#x2714;</span>  
       </div>
-      <div className="review-text">
-        "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”
-      </div>
-        
+    </div>
+    <div className='card'>
+      <div className='review'>
+        <div className='review-text'>
+          <Stack spacing={1}>
+            <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
+          </Stack>
+          <p>"Excellent experience! I couldn't have asked for better assistance."</p>
+          <p><strong>- Alex K.</strong></p>
         </div>
-      </Slider>
+      </div>
+    </div>
+    <div className='card'>
+      <div className='review'>
+        <div className='review-text'>
+          <Stack spacing={1}>
+            <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
+          </Stack>
+          <p>"Amazing quality! I found exactly what I needed."</p>
+          <p><strong>- Jamie L.</strong></p>
+        </div>
+      </div>
+    </div>
+    <div className='card'>
+      <div className='review'>
+        <div className='review-text'>
+          <Stack spacing={1}>
+            <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
+          </Stack>
+          <p>"Great variety! They really cater to every style."</p>
+          <p><strong>- Morgan T.</strong></p>
+        </div>
+      </div>
+    </div>
+  </Slider>
+
+
      </div>
      <Footer/>
     </div>
