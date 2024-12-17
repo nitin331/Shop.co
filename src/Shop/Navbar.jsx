@@ -21,7 +21,7 @@ const Navbar = () => {
         </div>
         <ul className={`navbar-menu ${menuActive ? 'active' : ''}`}>
           <li className="navbar-item">
-            <a href="/shop">Shop</a>
+            <a href="/">Shop</a>
             <div className="dropdown">
               <a href="/casual">Casual</a>
               <a href="/shop/category2">Category 2</a>
