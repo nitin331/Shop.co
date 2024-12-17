@@ -164,7 +164,7 @@ const HomePage = () => {
             </div>
           ))}
         </div>
-        <button className="view-all">View All</button>
+        <a href="/casual"><button className="view-all">View All</button></a>
       </div>
       <div className="new-arrivals">
         <h1>TOP SELLING</h1>
@@ -188,7 +188,7 @@ const HomePage = () => {
             </div>
           ))}
         </div>
-        <button className="view-all">View All</button>
+        <a href="/casual"><button className="view-all">View All</button></a>
       </div>
       <div className="app">
         <div className="header">
