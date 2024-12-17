@@ -368,43 +368,65 @@
   }
 } 
 
-.slider h1{
-   margin-left: 20px;
+.slider {
+  padding: 20px; /* Add some padding around the slider */
 }
 
-.review-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  max-width: 400px;
-  margin: 20px auto;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-align: center;  /* Center-align text content */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px; /* Space between cards */
+  transition: transform 0.2s; /* Animation for hover effect */
 }
 
-.stars {
-  color: gold;
-  font-size: 1.2em;
+.card:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.review {
+  background-color: #fff; /* White background for reviews */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  text-align: center; /* Center text */
+  width: 100%; /* Full width of the card container */
+  max-width: 400px; /* Limit width of cards */
+  margin: auto; /* Center the cards */
+}
+
+.review-text {
+  font-style: italic; /* Italicize review text */
+  color: #555; /* Dark gray text color */
+  margin: 10px 0; /* Space above and below text */
 }
 
 .reviewer {
   display: flex;
-  justify-content: center;  /* Center-align flex items */
+  justify-content: center; /* Center-align reviewer name */
   align-items: center;
-  margin: 10px 0;
+  margin-top: 10px; /* Space above reviewer section */
 }
 
 .reviewer-name {
-  font-weight: bold;
-  margin-right: 5px;
+  font-weight: bold; /* Bold name */
+  margin-right: 5px; /* Space between name and verified icon */
 }
 
 .verified {
-  color: green;
+  color: green; /* Green for verified icon */
 }
 
-.review-text {
-  font-style: italic;
-  color: #555;
-  padding: 10px 20px;  /* Add padding to the left and right sides */
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    margin: 5px; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .review {
+    padding: 15px; /* Reduce padding on small screens */
+  }
 }
